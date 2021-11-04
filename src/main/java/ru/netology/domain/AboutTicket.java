@@ -1,0 +1,78 @@
+package ru.netology.domain;
+
+public class AboutTicket implements Comparable<AboutTicket> {
+    private int id;
+    private int price;
+    private String departureAirport;
+    private String arrivalAirport;
+    private int travelTime;
+
+    public boolean matches(String from, String to) {
+        return departureAirport.contains(from) && arrivalAirport.contains(to);
+    }
+
+    public AboutTicket() {
+    }
+
+
+    public AboutTicket(int id, int price, String departureAirport, String arrivalAirport, int travelTime) {
+        this.id = id;
+        this.price = price;
+        this.departureAirport = departureAirport;
+        this.arrivalAirport = arrivalAirport;
+        this.travelTime = travelTime;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getDepartureAirport() {
+        return departureAirport;
+    }
+
+    public void setDepartureAirport(String departureAirport) {
+        this.departureAirport = departureAirport;
+    }
+
+    public String getArrivalAirport() {
+        return arrivalAirport;
+    }
+
+    public void setArrivalAirport(String arrivalAirport) {
+        this.arrivalAirport = arrivalAirport;
+    }
+
+    public int getTravelTime() {
+        return travelTime;
+    }
+
+    public void setTravelTime(int travelTime) {
+        this.travelTime = travelTime;
+    }
+
+    @Override
+    public int compareTo(AboutTicket o) {
+        AboutTicket a = (AboutTicket) o;
+//        int result = this.price - a.price;
+//        if (result == 0) {
+//            return result;
+//
+//        } else if (result < 0) return -1;
+//        else return 1;
+        return price - a.price;
+    }
+}
