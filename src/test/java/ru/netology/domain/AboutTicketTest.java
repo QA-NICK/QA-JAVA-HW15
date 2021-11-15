@@ -42,7 +42,6 @@ class AboutTicketTest {
     public void shouldFindAll() {
         AboutTicket[] expected = new AboutTicket[]{three, one};
         AboutTicket[] actual = manager.findAll("DME", "SAR");
-        Arrays.sort(actual);
         assertArrayEquals(expected, actual);
 
     }

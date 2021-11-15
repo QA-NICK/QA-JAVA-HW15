@@ -67,12 +67,7 @@ public class AboutTicket implements Comparable<AboutTicket> {
     @Override
     public int compareTo(AboutTicket o) {
         AboutTicket a = (AboutTicket) o;
-//        int result = this.price - a.price;
-//        if (result == 0) {
-//            return result;
-//
-//        } else if (result < 0) return -1;
-//        else return 1;
+
         return price - a.price;
     }
 }
